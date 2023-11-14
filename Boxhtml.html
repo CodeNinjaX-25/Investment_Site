@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Platform</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            color: white;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        #cta {
+            background-color: #333;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .cta-text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        #signup {
+            background-color: #333;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .signup-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        #user-info {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #user-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Investment Platform</h1>
+    </header>
+
+    <section id="hero">
+        <div>
+            <h1>Start Investing Today</h1>
+            <p>Grow your wealth with our secure and reliable investment platform.</p>
+        </div>
+    </section>
+
+    <section id="cta">
+        <div class="cta-text">
+            <h2>Ready to get started?</h2>
+            <p>Join our platform and begin your journey towards financial success.</p>
+            <a href="#signup" class="cta-btn">Sign Up Now</a>
+        </div>
+    </section>
+
+    <section id="signup">
+        <div class="signup-form">
+            <h2>Create an Account</h2>
+            <form id="registrationForm" action="animationJS.html" method="GET">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div id="user-info">
+        <h2>Your Information</h2>
+        <div class="info-item">
+            <span>Username:</span>
+            <span id="username"></span>
+        </div>
+        <div class="info-item">
+            <span>Email:</span>
+            <span id="email"></span>
+        </div>
+        <div class="info-item">
+            <span>Password:</span>
+            <span id="password"></span>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Investment Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Retrieve data from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        const email = urlParams.get('email');
+        const password = urlParams.get('password');
+
+        // Display data on the dashboard
+        document.getElementById('username').innerText = username;
+        document.getElementById('email').innerText = email;
+        document.getElementById('password').innerText = password;
+    </script>
+</body>
+</html>
